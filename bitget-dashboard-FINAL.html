@@ -1124,7 +1124,7 @@ window.addEventListener('load', ()=>{
 let _lastBuyTs=0; // guarda epoch ms da última compra registrada
 let _lastSellTs=0; // guarda epoch ms da última venda registrada
 
-function setLastBuy(coin, price, time, tsMs){
+async function setLastBuy(coin, price, time, tsMs){
   if(!price||isNaN(price)||price<=0) return;
   // Não sobrescreve se o novo timestamp for mais antigo que o já exibido
   const t=tsMs||Date.now();
